@@ -10,7 +10,12 @@ function SceneTransition({ tone }: { tone: string }) { return <div className={`s
 
 export function Story() {
   const root = useRef<HTMLElement>(null)
-  useEffect(() => { document.documentElement.style.scrollBehavior = 'smooth' }, [])
+  useEffect(() => {
+    const html = document.documentElement
+    const previousBehavior = html.style.scrollBehavior
+    html.style.scrollBehavior = 'smooth'
+    return () => { html.style.scrollBehavior = previousBehavior }
+  }, [])
   useStoryMotion(root)
   return <main ref={root}>
     <Progress />

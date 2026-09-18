@@ -10,9 +10,9 @@ export function usePhraseReveal(root: RefObject<HTMLElement | null>) {
     if (!stage || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const context = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>('.story-line').forEach((line) => {
-        const reveal = gsap.timeline({ scrollTrigger: { trigger: line, start: 'top 76%', end: 'top 42%', scrub: 0.65 } })
+        const reveal = gsap.timeline({ scrollTrigger: { trigger: line, start: 'top 78%', end: 'top 56%', scrub: 0.8 } })
         reveal.fromTo(line, { autoAlpha: 0, y: 38, scale: 0.975, filter: 'blur(6px)' }, { autoAlpha: 1, y: 0, scale: 1, filter: 'blur(0px)', ease: 'none' })
-        gsap.to(line, { autoAlpha: 0, y: -34, scale: 0.985, filter: 'blur(5px)', ease: 'none', scrollTrigger: { trigger: line, start: 'bottom 58%', end: 'bottom 30%', scrub: 0.65 } })
+        gsap.to(line, { autoAlpha: 0, y: -34, scale: 0.985, filter: 'blur(5px)', ease: 'none', scrollTrigger: { trigger: line, start: 'bottom 48%', end: 'bottom 25%', scrub: 0.8 } })
       })
     }, stage)
     return () => context.revert()
