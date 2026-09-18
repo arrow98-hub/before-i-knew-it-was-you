@@ -115,29 +115,12 @@
   opacity: 0.32;
   mix-blend-mode: multiply;
 }
-.hero::after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 15%;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    #090f1a18 36%,
-    #11131ab8 100%
-  );
-  filter: blur(7px);
-  pointer-events: none;
-}
 .scene-transition {
   position: relative;
   z-index: 4;
-  height: 18vh;
+  height: 10vh;
   overflow: hidden;
-  opacity: 0.9;
+  opacity: 1;
 }
 .scene-transition:before,
 .scene-transition:after,
@@ -148,62 +131,16 @@
   display: block;
 }
 .scene-transition:before {
-  background: inherit;
-  filter: blur(24px);
-  opacity: 0.78;
-  transform: scale(1.1);
+  display: none;
 }
 .scene-transition:after {
-  background:
-    linear-gradient(180deg, transparent 0%, #ffffff0d 50%, transparent 100%),
-    radial-gradient(ellipse at 50% 0%, #ffffff19 0%, transparent 62%);
-  mix-blend-mode: screen;
+  display: none;
 }
 .scene-transition__veil {
-  transform-origin: center;
-  background:
-    radial-gradient(ellipse at 50% 110%, #ffffff30, transparent 63%),
-    linear-gradient(180deg, #00000018, transparent 45%, #ffffff12);
-  filter: blur(4px);
+  display: none;
 }
 .scene-transition.to-light {
-  background:
-    linear-gradient(
-      180deg,
-      #071827 0%,
-      #12344b 18%,
-      #6f9fa5 46%,
-      #c9ded9 72%,
-      #eef0e3 100%
-    );
-}
-.scene-transition.to-light::before {
-  background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      #071827cc 0%,
-      #123b52a8 28%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse at 50% 100%,
-      #f7fbf2 0%,
-      #dbe9dfcc 32%,
-      transparent 74%
-    );
-  filter: blur(30px);
-  opacity: 0.94;
-}
-.scene-transition.to-light::after {
-  background:
-    linear-gradient(
-      180deg,
-      #07182766 0%,
-      transparent 34%,
-      #ffffff38 74%,
-      #ffffff80 100%
-    ),
-    radial-gradient(ellipse at 50% 100%, #ffffff70 0%, transparent 70%);
+  background: #8ab9ba;
 }
 .to-light {
   background: linear-gradient(180deg, #11131a 0%, #887d89 52%, #eef0e3 100%);
@@ -249,7 +186,7 @@
 }
 @media (max-width: 700px) {
   .scene-transition {
-    height: 13vh;
+    height: 7vh;
   }
   .hero-image {
     object-position: center 60%;
