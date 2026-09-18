@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Music2, Pause, Play } from "lucide-react";
 import { Atmosphere, Thread } from "../components/Atmosphere";
 import { Progress } from "../components/Progress";
 import { story } from "../content/story";
@@ -36,8 +37,13 @@ function SceneTransition({ tone }: { tone: string }) {
   );
 }
 
+const STORY_SONG = "/audio/story-song.mp3";
+
 export function Story() {
   const root = useRef<HTMLElement>(null);
+  const audio = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audioAvailable, setAudioAvailable] = useState(true);
   useEffect(() => {
     const html = document.documentElement;
     const previousBehavior = html.style.scrollBehavior;
@@ -47,8 +53,34 @@ export function Story() {
     };
   }, []);
   useStoryMotion(root);
+
+  const toggleMusic = async () => {
+    if (!audio.current || !audioAvailable) return;
+
+    if (audio.current.paused) {
+      try {
+        await audio.current.play();
+        setIsPlaying(true);
+      } catch {
+        setAudioAvailable(false);
+      }
+      return;
+    }
+
+    audio.current.pause();
+    setIsPlaying(false);
+  };
+
   return (
     <main ref={root}>
+      <audio
+        ref={audio}
+        src={STORY_SONG}
+        loop
+        preload="metadata"
+        onEnded={() => setIsPlaying(false)}
+        onError={() => setAudioAvailable(false)}
+      />
       <Progress />
       <section className="hero" aria-labelledby="title">
         <img
@@ -78,7 +110,18 @@ export function Story() {
       </section>
       <Chapter id="prologue" number="00" title="Prólogo" mood="prologue">
         <p className="kicker">Antes de saber que eras tú</p>
-        <ScrollStory lines={story.prologue} />
+        <button
+          className="music-toggle"
+          type="button"
+          onClick={toggleMusic}
+          disabled={!audioAvailable}
+          aria-label={isPlaying ? "Pausar música" : "Reproducir música"}
+        >
+          {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+          <Music2 size={18} />
+          <span>{isPlaying ? "Pausar música" : "Escuchar esta historia"}</span>
+        </button>
+        <ScrollStory className="prologue-story" lines={story.prologue} />
         <p className="te-vi">te vi.</p>
       </Chapter>
       <SceneTransition tone="to-light" />
