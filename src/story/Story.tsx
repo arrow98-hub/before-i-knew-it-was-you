@@ -124,7 +124,6 @@ export function Story() {
         <ScrollStory className="prologue-story" lines={story.prologue} />
         <p className="te-vi">te vi.</p>
       </Chapter>
-      <SceneTransition tone="to-light" />
       <Chapter id="looks" number="I" title="Las miradas" mood="looks">
         <div className="aurora" />
         <ScrollStory lines={story.looks} />
