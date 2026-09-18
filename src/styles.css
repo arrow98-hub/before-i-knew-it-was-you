@@ -340,7 +340,7 @@ main {
 .kicker,
 .scroll-cue {
   font:
-    12px "DM Mono",
+    16px "DM Mono",
     monospace;
   letter-spacing: 0.18em;
   text-transform: uppercase;
