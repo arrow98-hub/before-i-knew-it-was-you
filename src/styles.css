@@ -170,26 +170,39 @@
   background:
     linear-gradient(
       180deg,
-      #11131a 0%,
-      #4a4c59 24%,
-      #b8c4c4 58%,
+      #071827 0%,
+      #12344b 18%,
+      #6f9fa5 46%,
+      #c9ded9 72%,
       #eef0e3 100%
     );
 }
 .scene-transition.to-light::before {
   background:
     radial-gradient(
+      ellipse at 50% 0%,
+      #071827cc 0%,
+      #123b52a8 28%,
+      transparent 70%
+    ),
+    radial-gradient(
       ellipse at 50% 100%,
       #f7fbf2 0%,
-      #dbe9dfcc 30%,
-      transparent 72%
+      #dbe9dfcc 32%,
+      transparent 74%
     );
-  filter: blur(28px);
-  opacity: 0.9;
+  filter: blur(30px);
+  opacity: 0.94;
 }
 .scene-transition.to-light::after {
   background:
-    linear-gradient(180deg, transparent 0%, #ffffff24 58%, #ffffff80 100%),
+    linear-gradient(
+      180deg,
+      #07182766 0%,
+      transparent 34%,
+      #ffffff38 74%,
+      #ffffff80 100%
+    ),
     radial-gradient(ellipse at 50% 100%, #ffffff70 0%, transparent 70%);
 }
 .to-light {
