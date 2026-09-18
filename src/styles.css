@@ -115,10 +115,27 @@
   opacity: 0.32;
   mix-blend-mode: multiply;
 }
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 22%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    #090f1a2e 32%,
+    #11131a 100%
+  );
+  filter: blur(10px);
+  pointer-events: none;
+}
 .scene-transition {
   position: relative;
   z-index: 4;
-  height: 14vh;
+  height: 16vh;
   overflow: hidden;
   opacity: 0.78;
 }
@@ -131,16 +148,23 @@
   display: block;
 }
 .scene-transition:before {
-  filter: blur(18px);
-  transform: scale(1.08);
+  background: inherit;
+  filter: blur(24px);
+  opacity: 0.78;
+  transform: scale(1.1);
 }
 .scene-transition:after {
-  background: radial-gradient(ellipse at 50% 0%, #ffffff19 0%, transparent 62%);
+  background:
+    linear-gradient(180deg, transparent 0%, #ffffff0d 50%, transparent 100%),
+    radial-gradient(ellipse at 50% 0%, #ffffff19 0%, transparent 62%);
   mix-blend-mode: screen;
 }
 .scene-transition__veil {
   transform-origin: center;
-  background: radial-gradient(ellipse at 50% 110%, #ffffff24, transparent 63%);
+  background:
+    radial-gradient(ellipse at 50% 110%, #ffffff30, transparent 63%),
+    linear-gradient(180deg, #00000018, transparent 45%, #ffffff12);
+  filter: blur(4px);
 }
 .to-light {
   background: linear-gradient(180deg, #11131a 0%, #887d89 52%, #eef0e3 100%);
@@ -186,7 +210,7 @@
 }
 @media (max-width: 700px) {
   .scene-transition {
-    height: 9vh;
+    height: 11vh;
   }
   .hero-image {
     object-position: center 60%;
