@@ -390,15 +390,20 @@ main {
   gap: 16px;
   position: relative;
   z-index: 3;
-  font-size: 14px;
+  font-family: "DM Mono", monospace;
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
+  font-weight: 500;
   line-height: 1.2;
-  opacity: 0.62;
+  opacity: 0.82;
+}
+.chapter-label span {
+  display: block;
 }
 .chapter-label span:first-child {
   color: #f1b2a9;
 }
 .chapter-label span:last-child {
-  font-size: 0.9em;
+  font-size: 0.92em;
   letter-spacing: 0.14em;
 }
 .copy {
@@ -725,6 +730,7 @@ footer h2 {
   .chapter-label {
     position: absolute;
     top: 60px;
+    font-size: 1rem;
   }
   .copy,
   .looks .copy,
