@@ -455,11 +455,11 @@ main {
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 18px;
   width: fit-content;
-  margin: 2vh auto 0;
-  padding: 10px 16px;
-  border: 1px solid #ffffff2e;
+  margin: 1vh auto 0;
+  padding: 20px 32px;
+  border: 2px solid #ffffff2e;
   border-radius: 999px;
   color: #e2d7c6;
   background: #ffffff0d;
@@ -467,7 +467,7 @@ main {
   backdrop-filter: blur(12px);
   cursor: pointer;
   font:
-    500 11px "DM Mono",
+    500 22px "DM Mono",
     monospace;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -475,6 +475,10 @@ main {
     background 180ms ease,
     border-color 180ms ease,
     transform 180ms ease;
+}
+.music-toggle svg {
+  width: 32px;
+  height: 32px;
 }
 .music-toggle:hover:not(:disabled),
 .music-toggle:focus-visible {
@@ -487,7 +491,10 @@ main {
   opacity: 0.4;
 }
 .prologue-story {
-  margin-top: 2vh;
+  margin-top: 0;
+}
+.prologue-story .story-line:first-child {
+  top: 2vh !important;
 }
 .te-vi {
   position: relative;
