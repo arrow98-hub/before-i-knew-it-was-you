@@ -340,7 +340,7 @@ main {
 .kicker,
 .scroll-cue {
   font:
-    10px "DM Mono",
+    12px "DM Mono",
     monospace;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -390,13 +390,15 @@ main {
   gap: 16px;
   position: relative;
   z-index: 3;
+  font-size: 14px;
+  line-height: 1.2;
   opacity: 0.62;
 }
 .chapter-label span:first-child {
   color: #f1b2a9;
 }
 .chapter-label span:last-child {
-  font-size: 0.84em;
+  font-size: 0.9em;
   letter-spacing: 0.14em;
 }
 .copy {
