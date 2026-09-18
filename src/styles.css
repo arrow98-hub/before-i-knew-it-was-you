@@ -372,11 +372,17 @@ main {
   bottom: 33px;
   left: clamp(25px, 10vw, 150px);
   color: #fff9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.scroll-cue span {
+.scroll-arrow {
   font-size: 20px;
-  vertical-align: middle;
-  margin-left: 10px;
+  line-height: 1;
+  animation: arrow-breathe 1.8s ease-in-out infinite;
+}
+.scroll-cue > span:nth-child(3) {
+  animation-delay: 0.18s;
 }
 .chapter {
   position: relative;
@@ -509,6 +515,7 @@ main {
     italic clamp(4rem, 10vw, 11rem)/0.9 "Playfair Display",
     serif;
   letter-spacing: -0.06em;
+  animation: date-bounce 3.6s ease-in-out infinite;
 }
 .return {
   background: #09182d;
@@ -713,6 +720,35 @@ footer h2 {
     transform: translate(4%, -3%) rotate(8deg) scale(1.06);
   }
 }
+@keyframes arrow-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+}
+@keyframes date-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  18% {
+    transform: translateY(-7px);
+  }
+  34% {
+    transform: translateY(0);
+  }
+  46% {
+    transform: translateY(-3px);
+  }
+  58% {
+    transform: translateY(0);
+  }
+}
 @media (max-width: 700px) {
   .progress {
     right: 14px;
@@ -776,6 +812,10 @@ footer h2 {
   }
   .liquid,
   .rose {
+    animation: none;
+  }
+  .scroll-arrow,
+  .date {
     animation: none;
   }
 }

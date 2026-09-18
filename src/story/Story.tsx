@@ -67,7 +67,13 @@ export function Story() {
           <p className="hero-spanish">Antes de saber que eras tú</p>
         </div>
         <div className="scroll-cue">
-          desliza para recordar <span>↓</span>
+          <span className="scroll-arrow" aria-hidden="true">
+            ↓
+          </span>
+          <span>desliza para recordar</span>
+          <span className="scroll-arrow" aria-hidden="true">
+            ↓
+          </span>
         </div>
       </section>
       <Chapter id="prologue" number="00" title="Prólogo" mood="prologue">
