@@ -141,13 +141,7 @@ export function Story() {
           startOffset={2}
           endPadding={8}
         />
-        <img
-          className="story-image"
-          src="/images/eyes.jpg"
-          alt="Una mirada en primer plano"
-        />
       </Chapter>
-      <SceneTransition tone="to-cold" />
       <Chapter id="almost" number="II" title="El casi" mood="almost">
         <div className="liquid" />
         <ScrollStory lines={story.almost} />
