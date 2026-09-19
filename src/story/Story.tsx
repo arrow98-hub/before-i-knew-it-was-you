@@ -129,7 +129,7 @@ export function Story() {
         <p className="te-vi">te vi.</p>
         <img
           className="story-image"
-          src="/images/eyes.jpg"
+          src="/images/eyes.png"
           alt="Una mirada en primer plano"
         />
       </Chapter>

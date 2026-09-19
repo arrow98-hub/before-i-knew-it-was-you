@@ -14,29 +14,40 @@ export function usePhraseReveal(root: RefObject<HTMLElement | null>) {
         const reveal = gsap.timeline({
           scrollTrigger: {
             trigger: line,
-            start: "top 78%",
-            end: "top 56%",
+            start: "top 82%",
+            end: "bottom 22%",
             scrub: 0.8,
           },
         });
-        reveal.fromTo(
-          line,
-          { autoAlpha: 0, y: 38, scale: 0.975, filter: "blur(6px)" },
-          { autoAlpha: 1, y: 0, scale: 1, filter: "blur(0px)", ease: "none" },
-        );
-        gsap.to(line, {
-          autoAlpha: 0,
-          y: -34,
-          scale: 0.985,
-          filter: "blur(5px)",
-          ease: "none",
-          scrollTrigger: {
-            trigger: line,
-            start: "bottom 48%",
-            end: "bottom 25%",
-            scrub: 0.8,
-          },
-        });
+        reveal
+          .fromTo(
+            line,
+            { autoAlpha: 0, y: 38, scale: 0.975, filter: "blur(6px)" },
+            {
+              autoAlpha: 1,
+              y: 0,
+              scale: 1,
+              filter: "blur(0px)",
+              ease: "none",
+              duration: 0.35,
+            },
+          )
+          .to(line, {
+            autoAlpha: 1,
+            y: 0,
+            scale: 1,
+            filter: "blur(0px)",
+            ease: "none",
+            duration: 0.3,
+          })
+          .to(line, {
+            autoAlpha: 0,
+            y: -34,
+            scale: 0.985,
+            filter: "blur(5px)",
+            ease: "none",
+            duration: 0.35,
+          });
       });
     }, stage);
     return () => context.revert();
