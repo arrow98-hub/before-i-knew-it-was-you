@@ -121,12 +121,31 @@ export function Story() {
           <Music2 size={18} />
           <span>{isPlaying ? "Pausar música" : "Escuchar esta historia"}</span>
         </button>
-        <ScrollStory className="prologue-story" lines={story.prologue} />
+        <ScrollStory
+          className="prologue-story"
+          lines={story.prologue}
+          endPadding={8}
+        />
         <p className="te-vi">te vi.</p>
+        <img
+          className="story-image"
+          src="/images/eyes.jpg"
+          alt="Una mirada en primer plano"
+        />
       </Chapter>
       <Chapter id="looks" number="I" title="Las miradas" mood="looks">
         <div className="aurora" />
-        <ScrollStory lines={story.looks} />
+        <ScrollStory
+          className="looks-story"
+          lines={story.looks}
+          startOffset={2}
+          endPadding={8}
+        />
+        <img
+          className="story-image"
+          src="/images/eyes.jpg"
+          alt="Una mirada en primer plano"
+        />
       </Chapter>
       <SceneTransition tone="to-cold" />
       <Chapter id="almost" number="II" title="El casi" mood="almost">

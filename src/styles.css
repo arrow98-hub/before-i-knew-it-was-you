@@ -496,6 +496,28 @@ main {
 .prologue-story .story-line:first-child {
   top: 2vh !important;
 }
+.story-image {
+  position: relative;
+  z-index: 3;
+  display: block;
+  width: min(180px, 42vw);
+  height: auto;
+  margin: 5vh auto 0;
+  border: 1px solid #ffffff24;
+  border-radius: 12px;
+  opacity: 0.88;
+  box-shadow: 0 14px 40px #00000030;
+  object-fit: cover;
+}
+.prologue .story-image {
+  margin-top: 4vh;
+}
+.looks-story {
+  margin-top: 0;
+}
+.looks .story-image {
+  margin-top: 2vh;
+}
 .te-vi {
   position: relative;
   z-index: 3;
