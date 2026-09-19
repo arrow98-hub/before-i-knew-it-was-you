@@ -68,6 +68,20 @@ export const story = {
     "Y, aunque todavía no lo sabíamos...faltaba una fecha.",
 
   ],
+  august: [
+    "Llegó el día. Nuestra primera cita.",
+    "Comimos. Reímos. Hablamos.",
+    "Y probablemente ninguno de los dos quería que aquella noche terminara.",
+    "Pero todavía quedaba un lugar.",
+    "Un lago. Un muelle. La noche. Las estrellas. Y nosotros dos.",
+    "Hay momentos que parecen sencillos mientras los estás viviendo. Y solo después entiendes que estabas viviendo algo que algún día ibas a querer recordar para siempre.",
+    "Aquella noche fue uno de esos momentos. Estábamos ahí. Juntos. Bajo el cielo.",
+    "Y entre todas las cosas que podían estar ocurriendo en ese momento...yo solamente podía pensar en una.",
+    "Quería que tú fueras algo más. Pero no sabía exactamente cómo iba a salir. No sabía exactamente qué iba a decir.",
+    "Después de todo lo que habíamos vivido… yo quería elegirte.",
+    "Así que aquella noche...",
+    "te pregunté.",
+  ],
   us: [
     "Y ahora estamos aquí. Tú y yo. Después de todo.",
     "Después de las miradas. Después del miedo. Después del tiempo. Después de habernos perdido. Después de habernos vuelto a encontrar.",

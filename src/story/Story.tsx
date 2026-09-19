@@ -184,18 +184,7 @@ export function Story() {
       <SceneTransition tone="to-stars" />
       <Chapter id="august" number="IV" title="18 de agosto" mood="august">
         <Atmosphere variant="stars" />
-        <ScrollStory
-          lines={[
-            "Llegó el día. Nuestra primera cita.",
-            "Comimos. Reímos. Hablamos.",
-            "Y probablemente ninguno de los dos quería que aquella noche terminara.",
-            "Pero todavía quedaba un lugar.",
-            "Un lago. Un muelle. La noche. Las estrellas. Y nosotros dos.",
-            "Hay momentos que parecen sencillos mientras los estás viviendo. Y solo después entiendes que estabas viviendo algo que algún día ibas a querer recordar para siempre.",
-            "Aquella noche fue uno de esos momentos.",
-            "Después de todo lo que habíamos vivido… yo quería elegirte.",
-          ]}
-        />
+        <ScrollStory lines={story.august} />
         <div className="question">
           <span>Así que aquella noche…</span>
           <h2>
