@@ -500,17 +500,16 @@ main {
   position: relative;
   z-index: 3;
   display: block;
-  width: min(230px, 52vw);
+  width: min(320px, 68vw);
   height: auto;
   margin: 5vh auto 0;
-  border: 1px solid #ffffff24;
+  border: 0;
   border-radius: 12px;
-  opacity: 0.88;
-  box-shadow: 0 14px 40px #00000030;
+  opacity: 1;
   object-fit: cover;
 }
 .prologue .story-image {
-  margin-top: 4vh;
+  margin-top: 2vh;
 }
 .looks-story {
   margin-top: 0;
@@ -525,7 +524,7 @@ main {
   font:
     italic clamp(3.5rem, 8vw, 8rem)/0.8 "Playfair Display",
     serif;
-  margin: 14vh 0 0;
+  margin: 4vh 0 0;
   color: #e2d7c6;
   animation: te-vi-reveal 2.8s ease-in-out infinite;
 }
